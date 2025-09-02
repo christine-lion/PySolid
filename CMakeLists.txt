@@ -26,7 +26,7 @@ add_custom_command(
   DEPENDS src/pysolid/solid.for
   VERBATIM
   COMMAND "${Python_EXECUTABLE}" -m numpy.f2py
-          "${CMAKE_CURRENT_SOURCE_DIR}/src/pysolid/solid.for" -m solid --lower)
+          "${CMAKE_CURRENT_SOURCE_DIR}/src/pysolid/solid.for" -m solid --lower --backend meson -L"C:\Users\Christine.Lion\miniconda3\envs\mintpy\Library\lib")
 
 python_add_library(
   solid MODULE "${CMAKE_CURRENT_BINARY_DIR}/solidmodule.c"
